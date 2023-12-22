@@ -1,0 +1,91 @@
+body{
+    background-color: gray
+}
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "side head head head"
+    "side main main main"
+    "side main main main"
+    "side1 main main main"
+    "side1 main main main";
+    grid-template-columns: repeat(1, 1fr) repeat(1, 3fr );
+    grid-template-rows: repeat(1, 1fr) repeat(1, 4fr );
+}
+.grid-container > .sidebar-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-area: side;
+    background-color: lightblue;
+}
+.grid-container > .sidebar-bottom{
+    display: flex;
+    flex-direction: column;
+    grid-area: side1;
+    justify-content: flex-start;
+    background-color: lightblue;
+}
+.grid-container > .header{
+    grid-area: head;
+    background-color: wheat;
+}
+.grid-container > .main{
+    grid-area: main;
+    background-color: honeydew;
+}
+h1{
+    text-align: center;
+}
+.svg-menu, .svg-home, .svg-profile, .svg-messages, .svg-communities, .svg-history, .svg-tasks, .svg-settings, .svg-support, .svg-privacy, .svg-search, .svg-not{
+    width: 25px;
+    height: 25px;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+ul{
+    list-style: none;
+}
+
+.header > #search{
+    border-radius: 10px; 
+    margin-right: 150px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "one two"
+    "three four"
+    "five six";
+}
+
+.main > .one{
+    grid-area: one;
+    background-color: lightslategray;
+}
+.main > .two{
+    grid-area: two;
+    background-color: lightslategray;
+}
+.main > .three{
+    grid-area: three;
+    background-color: lightslategray;
+}
+.main > .four{
+    grid-area: four;
+    background-color: lightslategray;
+}
+.main > .five{
+    grid-area: five;
+    background-color: lightslategray;
+}
+.main > .six{
+    grid-area: six;
+    background-color: lightslategray;
+}
